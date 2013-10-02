@@ -1,25 +1,28 @@
 <?php
 	// sets the contestants array
 	$contestants = array(
-		'Edward' => '';
-		'Bob' => '';
-		'Joe' => '';
-		'Sam' => '';
-	)
+		'Edward' => 'unassigned',
+		'Bob' => 'unassigned',
+		'Joe' => 'unassigned',
+		'Sam' => 'unassigned',
+	);
 
-	int $winning_number = rand(1,4);
-	int $total_winners = '0';
+	print_r($contestants);
 
-	echo $total_winners;
+	$winning_number = rand(1,4);
+	$total_winners = '0';
 
-	foreach($contestants as $key => $value) {
+	// draws number for each participant
+	foreach ($contestants as $name => &$value) {
 		$draw_number = rand(1,4);
 
-		if $draw_number == $winning_number {
+		if ($draw_number == $winning_number) {
 			$value = 'winner!';
 			$total_winners++;
 		} else {
 			$value = 'loser.';
 		}
+
+		print $total_winners;
 	}
 ?>
