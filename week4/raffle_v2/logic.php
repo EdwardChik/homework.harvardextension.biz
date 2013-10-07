@@ -1,5 +1,5 @@
 <?php
-	$winning_number = rand(1,4);
+	$winning_number = rand(1,5);
 	$total_winners = 0;
 
 	$drawings = array(

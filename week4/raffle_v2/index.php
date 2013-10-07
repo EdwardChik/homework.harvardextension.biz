@@ -39,11 +39,11 @@
 
 				echo "<br><br>";
 
-				foreach($results as $key => $value) {
+				foreach($results as $key => &$value) {
 				echo $key." is a ".$value."<br />";
-				}			
+				}
 			}
-			
+
 			// if there are no winners
 			if ($total_winners == 0) {
 				echo "<p>Unfortunately, there were no winners this round. :(</p>";
